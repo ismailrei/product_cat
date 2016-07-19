@@ -29,8 +29,8 @@ var category=function (options){
             {
                 category.data$(
                     {
-                        name:args.name,
-                        description:args.description
+                        name:args.category.name,
+                        description:args.category.description
                     });
                     category.save$(function(err,cat)
                     {
