@@ -25,14 +25,17 @@ var category=function (options){
             });
         })
         .add({role:"category",action:"edit"},function(args,done){
-            seneca.act({role:"category",action:"fetch",critere:"byId",id:args.id},function(err,category)
+            //console.log("******************************");
+            seneca.act({role:"category",action:"fetch",critere:"byId",id:args.id},function(err,cat)
             {
-                category.data$(
+               
+                cat.data$(
                     {
                         name:args.category.name,
                         description:args.category.description
                     });
-                    category.save$(function(err,cat)
+                     console.log(cat);
+                    cat.save$(function(err,cate)
                     {
                         done(cat.data$(false));
                     });

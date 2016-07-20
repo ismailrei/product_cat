@@ -14,7 +14,7 @@ var seneca=require("seneca")()
              
           var product=this.make$('product');
           var cate1={
-              name:"cat1222",
+              name:"category",
               description:"first cat",
           }
           var prod1={
