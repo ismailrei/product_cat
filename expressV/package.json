@@ -1,0 +1,25 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "first app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node lib/product.js |node lib/category.js | node test/index.js",
+    "test": "mocha mongo.test.js --seneca.log.print"
+  },
+  "keywords": [
+    "product",
+    "category"
+  ],
+  "author": "ismail reida",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bson": "^0.5.2",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.4",
+    "seneca": "^2.1.0",
+    "seneca-entity": "^1.2.0",
+    "seneca-mongo-store": "^0.2.0"
+  }
+}
