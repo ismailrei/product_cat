@@ -66,4 +66,4 @@ var seneca=require("seneca")()
         port:"27017"
        })
     .listen({port:8081,
-            host:'127.0.0.1'});
+            host:'127.0.0.1',type:'tcp'});

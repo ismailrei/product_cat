@@ -1,6 +1,6 @@
-var senecaCategory = require("seneca")().client({host: "127.0.0.1",port: 8082})
+var senecaCategory = require("seneca")().client({host: "127.0.0.1",port: 8082,type:'tcp'})
 .use('entity');
-var senecaProduct = require("seneca")().client({host: "127.0.0.1",port: 8081})
+var senecaProduct = require("seneca")().client({host: "127.0.0.1",port: 8081,type:'tcp'})
 .use('entity');
 var seneca=require("seneca")()
     seneca.use('entity')
@@ -63,7 +63,5 @@ var seneca=require("seneca")()
                  product.load$({id:"hawwbb"}, function (err, entity) {console.log(entity)});            
             */  
       })
-var app=require("express")()
-    .use(require("body-parser").json())
-    .use(seneca.export('web'))
-    .listen(3000);
+      .listen({port:3000,
+            host:'127.0.0.1',type:'tcp'});

@@ -53,4 +53,4 @@ var seneca=require("seneca")()
        })
     .use("category")
     .listen({port:8082,
-            host:'127.0.0.1'});
+            host:'127.0.0.1',type:'tcp'});
