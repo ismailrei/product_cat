@@ -4,6 +4,7 @@
   "description": "first app",
   "main": "index.js",
   "scripts": {
+    "start":"npm install && node lib/product.js |node lib/category.js | node test/index.js", 
     "test": "mocha mongo.test.js --seneca.log.print"
   },
   "keywords": [

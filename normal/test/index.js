@@ -1,4 +1,4 @@
-var senecaCategory = require("seneca")().client({host: "127.0.0.1",port: 8080})
+var senecaCategory = require("seneca")().client({host: "127.0.0.1",port: 8082})
 .use('entity');
 var senecaProduct = require("seneca")().client({host: "127.0.0.1",port: 8081})
 .use('entity');
@@ -33,7 +33,7 @@ var seneca=require("seneca")()
           {
               console.log(prod);
           });
-          senecaCategory.act({role:"category",action:"edit",id:"578e4d39916657189a9e59b9",category:cate1},console.log);
+         // senecaCategory.act({role:"category",action:"edit",id:"578e4d39916657189a9e59b9",category:cate1},console.log);
           /*senecaProduct.act({role:"product",action:"fetch",critere:"byCategory",id:"578e4d39916657189a9e59b9"},function(err,prod)
           {
               console.log(prod);
