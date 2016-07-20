@@ -1,6 +1,16 @@
-var senecaCategory = require("seneca")().client({host: "127.0.0.1",port: 8083})
+var senecaCategory = require("seneca")().client({
+    type: 'http',
+    port: '8083',
+    host: '127.0.0.1',
+    protocol: 'http'
+  })
 .use('entity');
-var senecaProduct = require("seneca")().client({host: "127.0.0.1",port: 8082})
+var senecaProduct = require("seneca")().client({
+    type: 'http',
+    port: '8082',
+    host: '127.0.0.1',
+    protocol: 'http'
+  })
 .use('entity');
 var seneca=require("seneca")()
     seneca.use('entity')
@@ -29,7 +39,7 @@ var seneca=require("seneca")()
               
               price:13
           }
-          senecaCategory.act({role:"category",action:"fetch"},function(err,prod)
+          senecaProduct.act({role:"product",action:"fetch"},function(err,prod)
           {
              
               console.log(prod);
